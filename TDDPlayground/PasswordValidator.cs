@@ -10,7 +10,12 @@ namespace TDDPlayground
 
         public bool Verify(string password)
         {
-            return true;
+            if (password.Length >= 8)
+            {
+                return true;
+            }
+            return false;
+
         }
     }
 }
