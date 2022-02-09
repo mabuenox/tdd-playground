@@ -15,7 +15,7 @@ namespace TDDPlayground
         [Fact]
         public void verify_password_with_eight_character_is_valid()
         {
-            string password = "password";
+            string password = "Passw0rd";
 
             var validator = new PasswordValidator();
             
@@ -39,7 +39,7 @@ namespace TDDPlayground
         [Fact]
         public void verify_password_without_a_number_is_invalid()
         {
-            string password = "password";
+            string password = "Password";
 
             var validator = new PasswordValidator();
 
