@@ -10,11 +10,27 @@ namespace TDDPlayground
 
         public bool Verify(string password)
         {
-            if (password.Length >= 8)
+            if (password.Length < 8)
             {
-                return true;
+                return false;
             }
-            return false;
+
+            var hasNumber = false;
+            var chars = password.ToCharArray();
+            foreach(var c in chars)
+            {
+                if(char.IsNumber(c))
+                {
+                    hasNumber = true;
+                }
+            }
+
+            if(!hasNumber)
+            {
+                return false;
+            }
+
+            return true;
 
         }
     }
